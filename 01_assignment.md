@@ -64,7 +64,7 @@ don't forget to write some pseudocode before you start with the "proper" code.
 
 Instead of writing one big function that does everything, we will split the game
 into several, smaller functions, each for a specific task. This makes it easier
-to write and debug your code.  
+to write and debug your code.
 
 ### Step 1: Getting started
 
@@ -151,3 +151,25 @@ that it offers you another round after finishing the first.
 Last but not least, you could work on making what is printed to the screen
 prettier or you could just relax and play a game of Tic-tac-toe. You've earned
 it!
+
+
+
+
+Pseudocode: 
+
+1. the setup of the game: 3x3 field with 9 empty fields(1-9)
+2. set current player to "X".
+3. set game_over to "no".
+4. while the game_over says "no" repeat the following steps: 
+-show the 3x3 field on the screen,
+-ask the current player to pick a field from 1-9,
+-check if the chosen field is still open or already taken and also check if its between 1-9, if it is between 1-9 or already taken tell the player that this move is not possible, skip the rest of this turn and ask again
+5. place player_1´s or player_2´s mark ("X" or "O") in the chosen space if it is possible
+6. check if player_1 or player_2 has won:
+- if there are 3 of the same mark in a any row column or diagonal show the final field and show in the terminal "player1/player2 has won"
+- set game_over to "yes"
+7. check if the game is a draw:
+-if all 9 spaces are full and there is no winner then show the final field and say in the terminal that "it is a draw"
+- set game_over to "yes"
+8. switch turns when the game is still going, otherwise if the current player is player1 "X", change the current player to player2 "O" if not change the current player to "X"
+9. if the game ends ask the players if they want to play again
